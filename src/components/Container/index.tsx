@@ -4,8 +4,11 @@ const Container = ({
   ...props
 }: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <section className="bg-white py-16">
-      <div className={`mx-auto w-10/12 ${className}`} {...props}>
+    <section className="relative bg-white py-16">
+      <div
+        className={`mx-auto w-10/12 ${className ? className : ''}`}
+        {...props}
+      >
         {children}
       </div>
     </section>
