@@ -1,6 +1,7 @@
 import Container from '../Container'
-import Github from '../Logos/Github'
-import Linkedin from '../Logos/Linkedin'
+import Circles from './Circles'
+import Divider from './Divider'
+import SocialIcons from './SocialIcons'
 
 const About = () => {
   return (
@@ -40,44 +41,5 @@ const About = () => {
     </Container>
   )
 }
-
-const Circles = () => (
-  <div className="relative top-0 left-0 mx-auto aspect-square w-10/12 lg:mx-0 lg:w-11/12">
-    <div className="absolute top-0 left-0 aspect-square w-full rounded-full bg-primary-dark"></div>
-    <div className="absolute top-1/2 -right-2 z-10 aspect-square w-11/12 -translate-y-1/2 rounded-full bg-primary">
-      <div className="absolute bottom-0 left-2 aspect-square w-[87%] overflow-hidden rounded-full bg-primary-dark">
-        <img
-          src="https://media-exp1.licdn.com/dms/image/C4D03AQFeJZJ0VQ3Qbg/profile-displayphoto-shrink_800_800/0/1641076824457?e=1672876800&v=beta&t=s_hbPfHemwmkqt8BqA7Z7EKLgNjuRbTCljB5dgDgLTk"
-          alt=""
-          className="h-full w-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-)
-
-const Divider = () => (
-  <span className="mt-12 block h-1 w-1/3 bg-gradient-to-r"></span>
-)
-
-const SocialIcons = () => (
-  <div className="mt-10 flex items-center">
-    <a
-      href="https://www.linkedin.com/in/diaz-ignacio/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mr-10"
-    >
-      <Linkedin color="#151419" />
-    </a>
-    <a
-      href="https://github.com/DiazIgnacio"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Github color="#151419" />
-    </a>
-  </div>
-)
 
 export default About
