@@ -1,11 +1,12 @@
 import Container from '../Container'
+
 import Circles from './Circles'
 import Divider from './Divider'
 import SocialIcons from './SocialIcons'
 
-const About = () => {
+const About = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <Container>
+    <Container {...props}>
       <div className="text-center">
         <h2 className="text-5xl font-bold leading-10 text-primary">About Me</h2>
         <p className="mx-auto mt-5 max-w-[400px] text-lg leading-5 text-grey">

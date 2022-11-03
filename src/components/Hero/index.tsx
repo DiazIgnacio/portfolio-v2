@@ -2,9 +2,12 @@ import Infobar from './InfoBar'
 import Navbar from './Navbar'
 import Waves from './Waves'
 
-const Hero = () => {
+const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <div className="relative h-screen bg-black text-white">
+    <section
+      className={`relative h-screen bg-black text-white ${className}`}
+      {...props}
+    >
       <Infobar />
       <Navbar />
       <div className="mx-32 mt-20 w-4/5 max-w-[660px]">
@@ -23,7 +26,7 @@ const Hero = () => {
         </button>
       </div>
       <Waves />
-    </div>
+    </section>
   )
 }
 

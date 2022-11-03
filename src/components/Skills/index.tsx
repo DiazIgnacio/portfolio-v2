@@ -1,10 +1,11 @@
 import Container from '../Container'
+
 import Service from './Service'
 import Skill from './Skill'
 
-const Skills = () => {
+const Skills = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <Container className="flex flex-col lg:flex-row">
+    <Container className={`flex flex-col lg:flex-row ${className}`} {...props}>
       <div className="mr-16 w-full lg:w-1/2">
         <h1 className="text-3xl font-bold text-primary">My Skills</h1>
         <div className="mt-12 grid grid-cols-1 grid-rows-2 gap-12 md:grid-cols-2">

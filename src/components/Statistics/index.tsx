@@ -1,12 +1,17 @@
 import Container from '../Container'
 import Heart from '../Logos/Heart'
+
 import Background from './Background'
 
-const Statistics = () => {
+const Statistics = ({
+  className,
+  ...props
+}: React.HTMLProps<HTMLDivElement>) => {
   return (
     <Container
       background={<Background />}
-      className="flex flex-col text-center md:flex-row"
+      className={`flex flex-col text-center md:flex-row ${className}`}
+      {...props}
     >
       <div className="w-full md:w-1/3">
         <Heart className="mx-auto" />

@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import Container from '../Container'
+
 import { projects } from 'src/constants/projects'
+
+import Container from '../Container'
+
 import Circles from './Circles'
 
-const Projects = () => {
+const Projects = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
   const gridRef = useRef(null)
   const [colWidth, setColWidth] = useState(0)
 
@@ -23,7 +26,7 @@ const Projects = () => {
   }, [])
 
   return (
-    <Container className="w-9/12">
+    <Container className={`w-9/12 ${className}`} {...props}>
       <div className="text-center">
         <h2 className="text-5xl font-bold leading-10 text-primary">Projects</h2>
         <p className="mx-auto mt-5 max-w-[400px] text-lg leading-5 text-grey">

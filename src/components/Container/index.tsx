@@ -6,6 +6,7 @@ const Container = ({
   children,
   className,
   background,
+  id = '',
   ...props
 }: ContainerProps) => {
   return (
@@ -13,6 +14,7 @@ const Container = ({
       className={`relative overflow-x-hidden py-16 ${
         background ? '' : 'bg-white'
       }`}
+      id={id}
     >
       {background && background}
       <div
