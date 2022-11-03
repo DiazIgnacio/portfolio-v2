@@ -1,5 +1,5 @@
 type ContainerProps = React.HTMLProps<HTMLDivElement> & {
-  background: JSX.Element
+  background?: JSX.Element
 }
 
 const Container = ({
