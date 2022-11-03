@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Skills from 'src/components/Skills'
+import About from '../src/components/About'
 import Hero from '../src/components/Hero'
 
 const Home: NextPage = () => {
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
 
       <main>
         <Hero />
+        <About />
+        <Skills />
       </main>
 
       <footer></footer>
