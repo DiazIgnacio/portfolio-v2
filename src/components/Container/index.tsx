@@ -1,10 +1,20 @@
+type ContainerProps = React.HTMLProps<HTMLDivElement> & {
+  background: JSX.Element
+}
+
 const Container = ({
   children,
   className,
+  background,
   ...props
-}: React.HTMLProps<HTMLDivElement>) => {
+}: ContainerProps) => {
   return (
-    <section className="relative bg-white py-16">
+    <section
+      className={`relative overflow-x-hidden py-16 ${
+        background ? '' : 'bg-white'
+      }`}
+    >
+      {background && background}
       <div
         className={`mx-auto w-10/12 ${className ? className : ''}`}
         {...props}

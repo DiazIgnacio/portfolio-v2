@@ -97,7 +97,9 @@ const Projects = () => {
       <div className="mt-9 grid grid-cols-3 grid-rows-3 gap-6" ref={gridRef}>
         {projects.map(({ image, col, row }) => (
           <div
-            className={`col-span-${col} row-span-${row}`}
+            className={`${col === 1 ? 'col-span-1' : 'col-span-2'} ${
+              row === 1 ? 'row-span-1' : 'row-span-2'
+            }`}
             style={{ height: colWidth * row + 24 * (row - 1) }}
           >
             <img src={image} alt="" className="h-full w-full object-cover" />
