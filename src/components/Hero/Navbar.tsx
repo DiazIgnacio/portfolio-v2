@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
+import { useTheme } from 'src/contexts/ThemeContext'
 
 const Navbar = () => (
   <nav className="flex justify-between px-32 pt-6">
@@ -27,20 +28,7 @@ const Navbar = () => (
 )
 
 const ChangeTheme = () => {
-  const [theme, setTheme] = useState('blue')
-  const changeTheme = () => {
-    if (theme === 'blue') {
-      document.documentElement.setAttribute('data-theme', 'green')
-      setTheme('green')
-    } else if (theme === 'green') {
-      document.documentElement.setAttribute('data-theme', 'red')
-      setTheme('red')
-    } else {
-      document.documentElement.setAttribute('data-theme', 'blue')
-      setTheme('blue')
-    }
-  }
-
+  const { changeTheme } = useTheme()
   return (
     <button className="ml-10" onClick={changeTheme}>
       <div className="h-4 w-4 rounded-full bg-primary" />

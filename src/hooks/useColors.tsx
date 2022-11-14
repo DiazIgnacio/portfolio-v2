@@ -1,5 +1,46 @@
 import { useEffect, useState } from 'react'
+import { useTheme } from 'src/contexts/ThemeContext'
 import { theme } from 'tailwind.config'
+
+export const useColors = () => {
+  const { theme: currentTheme } = useTheme()
+  const [colors, setColors] = useState({})
+
+  useEffect(() => {
+    setTimeout(() => {
+      const newColors = getComputedColors()
+      setColors({ ...theme.extend.colors, ...computedColorsToHex(newColors) })
+    }, 0)
+  }, [currentTheme])
+
+  return colors
+}
+
+const globalColorsVariables = [
+  '--color-primary',
+  '--color-primaryDark',
+  '--color-gradientTo'
+]
+
+const getComputedColors = () =>
+  globalColorsVariables.reduce((acc: any, color: string) => {
+    const key = color.replace('--color-', '')
+    return {
+      ...acc,
+      [key]: getComputedStyle(document.documentElement).getPropertyValue(
+        '--color-primary'
+      )
+    }
+  }, {})
+
+const computedColorsToHex = (colors: { [key: string]: string }) =>
+  Object.keys(colors).reduce((acc: any, key: string) => {
+    const rgb = colors[key].match(/\d+/g)
+    if (rgb) {
+      acc[key] = rgbToHex(+rgb[0], +rgb[1], +rgb[2])
+    }
+    return acc
+  }, {})
 
 const rgbToHex = (r: number, g: number, b: number) => {
   const hex = [r, g, b]
@@ -9,37 +50,4 @@ const rgbToHex = (r: number, g: number, b: number) => {
     })
     .join('')
   return `#${hex}`
-}
-
-export const useColors = () => {
-  const [colors, setColors] = useState(theme.extend.colors)
-
-  useEffect(() => {
-    const newColors = {
-      primary: getComputedStyle(document.documentElement).getPropertyValue(
-        '--color-primary'
-      ),
-      'primary-dark': getComputedStyle(
-        document.documentElement
-      ).getPropertyValue('--color-primaryDark'),
-      gradientTo: getComputedStyle(document.documentElement).getPropertyValue(
-        '--color-gradientTo'
-      )
-    }
-
-    const newColorsHex = Object.keys(newColors).reduce(
-      (acc: any, key: string) => {
-        const rgb = newColors[key].match(/\d+/g)
-        if (rgb) {
-          acc[key] = rgbToHex(+rgb[0], +rgb[1], +rgb[2])
-        }
-        return acc
-      },
-      {}
-    )
-
-    setColors(colors => ({ ...colors, ...newColorsHex }))
-  }, [])
-
-  return colors
 }
