@@ -21,7 +21,7 @@ const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
           responsive websites. In my free time, I like to read and spend time
           with my family and friends.
         </p>
-        <button className="relative z-20 mt-10 cursor-pointer rounded-2xl bg-gradient-to-t px-12 py-5 text-2xl font-medium leading-6">
+        <button className="bg-gradient-to-t-primary relative z-20 mt-10 cursor-pointer rounded-2xl px-12 py-5 text-2xl font-medium leading-6">
           Portfolio
         </button>
       </div>

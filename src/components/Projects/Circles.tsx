@@ -11,7 +11,7 @@ const Circles = ({ rotate = false }) => (
     }`}
   >
     {/* Outer Circle */}
-    <div className="absolute top-0 left-0 aspect-square w-full rounded-full bg-gradient-to-t">
+    <div className="bg-gradient-to-t-primary absolute top-0 left-0 aspect-square w-full rounded-full">
       {/* Inner Circle */}
       <div className="absolute bottom-0 left-1/2 z-10 aspect-square w-[87%] -translate-x-1/2 rounded-full bg-primary">
         {/* Main Circle */}

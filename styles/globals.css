@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  [data-theme='blue'] {
+    --color-primary: 0, 153, 255;
+    --color-primaryDark: 0, 124, 206;
+    --color-gradientTo: 0, 116, 194;
+  }
+
+  [data-theme='green'] {
+    --color-primary: 0, 204, 153;
+    --color-primaryDark: 0, 153, 102;
+    --color-gradientTo: 0, 168, 107;
+  }
+
+  [data-theme='red'] {
+    --color-primary: 255, 102, 102;
+    --color-primaryDark: 204, 0, 0;
+    --color-gradientTo: 204, 51, 51;
+  }
+}
+
 html,
 body {
   padding: 0;

@@ -1,0 +1,10 @@
+@tailwind utilities;
+
+@layer utilities {
+  .bg-gradient-to-r-primary {
+    @apply bg-gradient-to-r from-primary to-gradientTo;
+  }
+  .bg-gradient-to-t-primary {
+    @apply bg-gradient-to-t from-gradientTo to-primary;
+  }
+}

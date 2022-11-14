@@ -1,25 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
-const blueTheme = {
-  primary: '#0099FF',
-  gradientTo: '#0074C2',
-  primaryDark: '#007CCE'
-}
-
-const greenTheme = {
-  primary: '#00CC99',
-  gradientTo: '#00A86B',
-  primaryDark: '#009966'
-}
-
-const redTheme = {
-  primary: '#FF6666',
-  gradientTo: '#CC3333',
-  primaryDark: '#CC0000'
-}
-
-const customColors = {
-  ...blueTheme
+function withOpacity(cssVariable) {
+  return ({ opacityValue }) => {
+    return opacityValue
+      ? `rgba(var(${cssVariable}), ${opacityValue})`
+      : `rgb(var(${cssVariable}))`
+  }
 }
 
 module.exports = {
@@ -29,9 +15,9 @@ module.exports = {
       colors: {
         white: '#f8f8f8',
         black: '#151419',
-        primary: customColors.primary,
-        'primary-dark': customColors.primaryDark,
-        gradientTo: customColors.gradientTo,
+        primary: withOpacity('--color-primary'),
+        'primary-dark': withOpacity('--color-primaryDark'),
+        gradientTo: withOpacity('--color-gradientTo'),
         grey: '#989898'
       },
       fontSize: {
@@ -53,11 +39,6 @@ module.exports = {
       fontFamily: {
         logo: ['Birthstone'],
         'logo-first-letter': ['Bilbo Swash Caps']
-      },
-      // Gradient
-      backgroundImage: {
-        'gradient-to-t': `linear-gradient(to top, ${customColors.gradientTo}, ${customColors.primary})`, // Primary
-        'gradient-to-r': `linear-gradient(to right, ${customColors.primary}, ${customColors.gradientTo})` // Primary
       }
     }
   },
