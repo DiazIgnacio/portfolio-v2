@@ -3,5 +3,5 @@ export type HOCLogoProps = React.HTMLAttributes<SVGElement> & {
 }
 
 export type LogoProps = React.HTMLAttributes<SVGElement> & {
-  color: string
+  color?: string
 }
