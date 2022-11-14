@@ -1,7 +1,7 @@
 import { useColors } from 'src/hooks/useColors'
 
 const WaveBack = (props: React.HTMLAttributes<SVGElement>) => {
-  const { 'primary-dark': primaryDark } = useColors()
+  const { primaryDark } = useColors()
   return (
     <svg
       width="1512"
