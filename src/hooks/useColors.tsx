@@ -6,6 +6,8 @@ type colors = {
   primary?: string
   primaryDark?: string
   gradientTo?: string
+  white?: string
+  black?: string
 }
 
 export const useColors = () => {
