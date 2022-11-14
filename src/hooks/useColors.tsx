@@ -2,9 +2,15 @@ import { useEffect, useState } from 'react'
 import { useTheme } from 'src/contexts/ThemeContext'
 import { theme } from 'tailwind.config'
 
+type colors = {
+  primary?: string
+  primaryDark?: string
+  gradientTo?: string
+}
+
 export const useColors = () => {
   const { theme: currentTheme } = useTheme()
-  const [colors, setColors] = useState({})
+  const [colors, setColors] = useState<colors>({})
 
   useEffect(() => {
     setTimeout(() => {
