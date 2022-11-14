@@ -1,6 +1,7 @@
+import withColor from 'src/helpers/withColor'
 import type { LogoProps } from '../../types/Logo'
 
-const WebDevelopment = ({ color = '#151419', ...props }: LogoProps) => {
+const WebDevelopment = ({ color, ...props }: LogoProps) => {
   return (
     <svg
       width="59"
@@ -18,4 +19,4 @@ const WebDevelopment = ({ color = '#151419', ...props }: LogoProps) => {
   )
 }
 
-export default WebDevelopment
+export default withColor(WebDevelopment)

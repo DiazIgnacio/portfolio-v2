@@ -1,6 +1,7 @@
+import withColor from 'src/helpers/withColor'
 import type { LogoProps } from '../../types/Logo'
 
-const Github = ({ color = '#F8F8F8', ...props }: LogoProps) => (
+const Github = ({ color, ...props }: LogoProps) => (
   <svg
     width="25"
     height="24"
@@ -18,4 +19,4 @@ const Github = ({ color = '#F8F8F8', ...props }: LogoProps) => (
   </svg>
 )
 
-export default Github
+export default withColor(Github)

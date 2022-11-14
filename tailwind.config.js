@@ -1,4 +1,27 @@
 /** @type {import('tailwindcss').Config} */
+
+const blueTheme = {
+  primary: '#0099FF',
+  gradientTo: '#0074C2',
+  primaryDark: '#007CCE'
+}
+
+const greenTheme = {
+  primary: '#00CC99',
+  gradientTo: '#00A86B',
+  primaryDark: '#009966'
+}
+
+const redTheme = {
+  primary: '#FF6666',
+  gradientTo: '#CC3333',
+  primaryDark: '#CC0000'
+}
+
+const customColors = {
+  ...blueTheme
+}
+
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -6,8 +29,9 @@ module.exports = {
       colors: {
         white: '#f8f8f8',
         black: '#151419',
-        primary: '#0099FF',
-        'primary-dark': '#007CCE',
+        primary: customColors.primary,
+        'primary-dark': customColors.primaryDark,
+        gradientTo: customColors.gradientTo,
         grey: '#989898'
       },
       fontSize: {
@@ -32,8 +56,8 @@ module.exports = {
       },
       // Gradient
       backgroundImage: {
-        'gradient-to-t': 'linear-gradient(to top, #0074C2, #0099FF)', // Primary
-        'gradient-to-r': 'linear-gradient(to right, #0099FF, #0074C2)' // Primary
+        'gradient-to-t': `linear-gradient(to top, ${customColors.gradientTo}, ${customColors.primary})`, // Primary
+        'gradient-to-r': `linear-gradient(to right, ${customColors.primary}, ${customColors.gradientTo})` // Primary
       }
     }
   },

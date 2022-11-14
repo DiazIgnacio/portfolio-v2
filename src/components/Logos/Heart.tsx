@@ -1,6 +1,8 @@
+import { useColors } from 'src/hooks/useColors'
 import type { LogoProps } from '../../types/Logo'
 
-const Heart = ({ color = '#F8F8F8', ...props }: LogoProps) => {
+const Heart = ({ ...props }: LogoProps) => {
+  const { primary, gradientTo } = useColors()
   return (
     <svg
       width="80"
@@ -24,7 +26,7 @@ const Heart = ({ color = '#F8F8F8', ...props }: LogoProps) => {
           width="97.4922"
           height="90.4629"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -60,8 +62,8 @@ const Heart = ({ color = '#F8F8F8', ...props }: LogoProps) => {
           y2="70.2286"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0099FF" />
-          <stop offset="1" stop-color="#0074C2" />
+          <stop stopColor={primary} />
+          <stop offset="1" stopColor={gradientTo} />
         </linearGradient>
       </defs>
     </svg>

@@ -1,6 +1,7 @@
+import withColor from 'src/helpers/withColor'
 import type { LogoProps } from '../../types/Logo'
 
-const Linkedin = ({ color = '#F8F8F8', ...props }: LogoProps) => (
+const Linkedin = ({ color, ...props }: LogoProps) => (
   <svg
     width="23"
     height="22"
@@ -18,4 +19,4 @@ const Linkedin = ({ color = '#F8F8F8', ...props }: LogoProps) => (
   </svg>
 )
 
-export default Linkedin
+export default withColor(Linkedin)

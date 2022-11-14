@@ -1,6 +1,7 @@
+import withColor from 'src/helpers/withColor'
 import type { LogoProps } from '../../types/Logo'
 
-const Phone = ({ color = '#F8F8F8', ...props }: LogoProps) => (
+const Phone = ({ color, ...props }: LogoProps) => (
   <svg
     width="12"
     height="12"
@@ -16,4 +17,4 @@ const Phone = ({ color = '#F8F8F8', ...props }: LogoProps) => (
   </svg>
 )
 
-export default Phone
+export default withColor(Phone)

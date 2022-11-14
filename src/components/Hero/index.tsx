@@ -15,7 +15,7 @@ const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
         <h1 className="mt-1 text-6xl font-semibold leading-[70px] text-primary">
           Front End Developer
         </h1>
-        <p className="mt-5 text-xl leading-8">
+        <p className="mt-5 text-base leading-8 md:text-lg lg:text-xl">
           Hi! I'm Ignacio Diaz, a Frontend Web Developer based in Argentina. I
           have a passion for all things web, and love working on interactive and
           responsive websites. In my free time, I like to read and spend time

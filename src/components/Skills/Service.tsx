@@ -8,7 +8,7 @@ export type ServiceProps = React.HTMLAttributes<HTMLDivElement> & {
 const Service = ({ name, description }: ServiceProps) => (
   <div className="flex items-center">
     <div>
-      <WebDevelopment />
+      <WebDevelopment filled />
     </div>
     <div className="ml-4">
       <h2 className="text-base font-bold leading-6 text-black lg:text-xl">
