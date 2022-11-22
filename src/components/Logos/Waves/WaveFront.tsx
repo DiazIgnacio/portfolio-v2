@@ -4,11 +4,12 @@ const WaveFront = (props: React.HTMLAttributes<SVGElement>) => {
   const { primary, gradientTo } = useColors()
   return (
     <svg
-      width="1512"
-      height="461"
+      width="100%"
+      height="100%"
       viewBox="0 0 1512 461"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
       {...props}
     >
       <g filter="url(#filter0_d_6_14)">

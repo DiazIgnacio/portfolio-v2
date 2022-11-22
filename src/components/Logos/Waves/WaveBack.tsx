@@ -4,11 +4,12 @@ const WaveBack = (props: React.HTMLAttributes<SVGElement>) => {
   const { primaryDark } = useColors()
   return (
     <svg
-      width="1512"
-      height="381"
+      width="100%"
+      height="100%"
       viewBox="0 0 1512 381"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
       {...props}
     >
       <g filter="url(#filter0_f_6_15)">

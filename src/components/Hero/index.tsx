@@ -5,7 +5,7 @@ import Waves from './Waves'
 const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
   return (
     <section
-      className={`relative h-screen bg-black text-white ${className}`}
+      className={`relative flex h-screen flex-col bg-black text-white ${className}`}
       {...props}
     >
       <Infobar />
@@ -21,9 +21,9 @@ const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
           responsive websites. In my free time, I like to read and spend time
           with my family and friends.
         </p>
-        <button className="bg-gradient-to-t-primary relative z-20 mt-10 cursor-pointer rounded-2xl px-12 py-5 text-2xl font-medium leading-6">
+        {/* <button className="bg-gradient-to-t-primary relative z-20 mt-10 cursor-pointer rounded-2xl px-12 py-5 text-2xl font-medium leading-6">
           Portfolio
-        </button>
+        </button> */}
       </div>
       <Waves />
     </section>
