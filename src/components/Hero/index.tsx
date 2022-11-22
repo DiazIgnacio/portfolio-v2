@@ -10,7 +10,7 @@ const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
     >
       <Infobar />
       <Navbar />
-      <div className="mx-32 mt-20 w-4/5 max-w-[660px]">
+      <div className="mx-32 mt-14 w-4/5 max-w-[660px]">
         <h2 className="text-3xl font-normal leading-9">I'm Ignacio</h2>
         <h1 className="mt-1 text-6xl font-semibold leading-[70px] text-primary">
           Front End Developer
@@ -21,9 +21,9 @@ const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
           responsive websites. In my free time, I like to read and spend time
           with my family and friends.
         </p>
-        {/* <button className="bg-gradient-to-t-primary relative z-20 mt-10 cursor-pointer rounded-2xl px-12 py-5 text-2xl font-medium leading-6">
+        <button className="bg-gradient-to-t-primary relative z-20 mt-10 cursor-pointer rounded-2xl px-12 py-5 text-2xl font-medium leading-6">
           Portfolio
-        </button> */}
+        </button>
       </div>
       <Waves />
     </section>
