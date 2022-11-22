@@ -4,7 +4,7 @@ import Linkedin from '../Logos/Linkedin'
 import Phone from '../Logos/Phone'
 
 const Infobar = () => (
-  <div className="flex h-10 w-screen items-center justify-around bg-primary">
+  <div className="hidden h-10 w-screen items-center justify-around bg-primary md:flex">
     <div className="flex">
       <span className="mr-7 flex items-center text-sm font-normal leading-10">
         <Email className="mr-4" />
