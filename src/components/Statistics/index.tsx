@@ -1,7 +1,6 @@
 import Container from '../Container'
 import Heart from '../Logos/Heart'
-
-import Background from './Background'
+import ScrollableBackground from '../ScrollableBackground'
 
 const Statistics = ({
   className,
@@ -9,7 +8,7 @@ const Statistics = ({
 }: React.HTMLProps<HTMLDivElement>) => {
   return (
     <Container
-      background={<Background />}
+      background={<ScrollableBackground />}
       className={`flex flex-col text-center md:flex-row ${className}`}
       {...props}
     >

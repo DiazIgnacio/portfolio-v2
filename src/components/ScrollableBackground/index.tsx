@@ -1,4 +1,4 @@
-const Background = () => (
+const ScrollableBackground = () => (
   <>
     <div
       className="absolute inset-0 -z-30 h-full bg-fixed"
@@ -12,4 +12,4 @@ const Background = () => (
   </>
 )
 
-export default Background
+export default ScrollableBackground
