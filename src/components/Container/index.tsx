@@ -19,7 +19,7 @@ const Container = forwardRef<HTMLDivElement, ContainerProps>(
   ) => {
     return (
       <section
-        className={`relative overflow-x-hidden py-12 md:py-16 ${
+        className={`relative overflow-hidden py-12 md:py-16 ${
           background ? '' : black ? 'bg-black' : 'bg-white'
         }`}
         id={id}

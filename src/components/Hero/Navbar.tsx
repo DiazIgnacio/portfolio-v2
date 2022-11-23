@@ -12,15 +12,15 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 45) {
+      if (document.body.scrollTop > 45) {
         !isScrolled && setIsScrolled(true)
       } else {
         isScrolled && setIsScrolled(false)
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    document.body.addEventListener('scroll', handleScroll)
+    return () => document.body.removeEventListener('scroll', handleScroll)
   }, [isScrolled])
 
   const closeMenu = () => setIsOpen(false)
