@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 import { projects } from 'src/constants/projects'
+import useScreenSize from 'src/hooks/useScreenSize'
 
 import Container from '../Container'
 
@@ -11,6 +12,7 @@ import styles from './Projects.module.css'
 const Projects = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
   const gridRef = useRef(null)
   const [colWidth, setColWidth] = useState(0)
+  const { isMobile } = useScreenSize()
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,10 +40,14 @@ const Projects = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
       <div className="mt-9 grid grid-cols-3 grid-rows-3 gap-6" ref={gridRef}>
         {projects.map(({ image, col, row, link, title }) => (
           <div
-            className={`${col === 1 ? 'col-span-1' : 'col-span-2'} ${
-              row === 1 ? 'row-span-1' : 'row-span-2'
-            } relative overflow-hidden ${styles.project}`}
-            style={{ height: colWidth * row + GAP * (row - 1) }}
+            className={`col-span-3 row-span-1 ${
+              col === 1 ? 'md:col-span-1' : 'md:col-span-2'
+            } ${row === 1 ? '' : 'md:row-span-2'} relative overflow-hidden ${
+              styles.project
+            }`}
+            style={
+              !isMobile ? { height: colWidth * row + GAP * (row - 1) } : {}
+            }
           >
             <img
               src={image}

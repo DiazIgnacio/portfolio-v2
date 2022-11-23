@@ -4,7 +4,7 @@ type Circles = {
 
 const Circles = ({ rotate = false }) => (
   <div
-    className={`absolute mx-auto aspect-square h-1/3 lg:mx-0 ${
+    className={`absolute mx-auto aspect-square w-1/3 md:h-1/3 md:w-auto lg:mx-0 ${
       rotate
         ? '-right-[8.33%] bottom-16 translate-x-1/2 rotate-180'
         : '-left-[8.33%] top-16 -translate-x-1/2'
