@@ -34,10 +34,9 @@ const Home: NextPage = () => {
         <Skills id="skills" />
         <Projects id="projects" />
         <Statistics id="statistics" />
-        <Footer id="statistics" />
       </main>
 
-      <footer></footer>
+      <Footer id="statistics" />
     </>
   )
 }
