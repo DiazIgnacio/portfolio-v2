@@ -5,6 +5,7 @@ import Skills from 'src/components/Skills'
 import Statistics from 'src/components/Statistics'
 import About from 'src/components/About'
 import Hero from 'src/components/Hero'
+import Footer from 'src/components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
         <Skills id="skills" />
         <Projects id="projects" />
         <Statistics id="statistics" />
+        <Footer id="statistics" />
       </main>
 
       <footer></footer>

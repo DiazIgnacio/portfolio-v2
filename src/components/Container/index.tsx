@@ -1,5 +1,6 @@
 type ContainerProps = React.HTMLProps<HTMLDivElement> & {
   background?: JSX.Element
+  black?: boolean
 }
 
 const Container = ({
@@ -7,12 +8,13 @@ const Container = ({
   className,
   background,
   id = '',
+  black = false,
   ...props
 }: ContainerProps) => {
   return (
     <section
-      className={`relative overflow-x-hidden py-16 ${
-        background ? '' : 'bg-white'
+      className={`relative overflow-x-hidden py-12 md:py-16 ${
+        background ? '' : black ? 'bg-black' : 'bg-white'
       }`}
       id={id}
     >

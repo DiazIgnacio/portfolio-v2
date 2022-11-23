@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import { useTheme } from 'src/contexts/ThemeContext'
+import Logo from '../Logo'
 
 import styles from './Navbar.module.css'
 
@@ -32,10 +33,7 @@ const Navbar = () => {
       }`}
     >
       <Link href="/">
-        <div className="cursor-pointer text-4xl uppercase leading-10 md:text-5xl">
-          <span className="font-logo-first-letter">I</span>
-          <span className="font-logo">gnacio</span>
-        </div>
+        <Logo />
       </Link>
 
       {/* Mobile Menu */}
