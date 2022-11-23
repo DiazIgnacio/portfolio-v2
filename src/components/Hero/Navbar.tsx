@@ -27,8 +27,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`px-auto fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-black px-8 transition-all md:px-10 lg:px-32 ${
-        isScrolled ? 'py-2' : 'py-6'
+      className={`px-auto left-0 right-0 top-0 z-50 flex items-center justify-between bg-black px-8 transition-all md:px-10 lg:px-32 ${
+        isScrolled ? 'fixed py-2' : 'py-6'
       }`}
     >
       <Link href="/">
