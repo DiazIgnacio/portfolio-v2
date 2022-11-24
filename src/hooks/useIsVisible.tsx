@@ -5,7 +5,10 @@ export const useForceRerender = () => {
   return () => setValue(value => value + 1)
 }
 
-export const useIsElementVisible = (target: Element, options = undefined) => {
+export const useIsElementVisible = (
+  target: HTMLDivElement | null,
+  options = undefined
+) => {
   const [isVisible, setIsVisible] = useState(false)
   const forceUpdate = useForceRerender()
 

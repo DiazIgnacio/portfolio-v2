@@ -11,7 +11,7 @@ const Statistics = ({
   className,
   ...props
 }: React.HTMLProps<HTMLDivElement>) => {
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement | null>(null)
   const isVisible = useIsElementVisible(ref.current)
 
   return (
