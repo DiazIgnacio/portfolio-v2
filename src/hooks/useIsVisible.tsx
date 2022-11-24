@@ -5,7 +5,7 @@ export const useForceRerender = () => {
   return () => setValue(value => value + 1)
 }
 
-export const useIsElementVisible = (target, options = undefined) => {
+export const useIsElementVisible = (target: Element, options = undefined) => {
   const [isVisible, setIsVisible] = useState(false)
   const forceUpdate = useForceRerender()
 
@@ -22,7 +22,8 @@ export const useIsElementVisible = (target, options = undefined) => {
     return () => observer.unobserve(target)
   }, [target, options])
 
-  const handleVisibilityChange = ([entry]) => setIsVisible(entry.isIntersecting)
+  const handleVisibilityChange: IntersectionObserverCallback = ([entry]) =>
+    setIsVisible(entry.isIntersecting)
 
   return isVisible
 }
