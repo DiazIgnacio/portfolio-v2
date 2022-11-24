@@ -15,38 +15,38 @@ const Statistics = ({
   const isVisible = useIsElementVisible(ref.current)
 
   return (
-    <Container
-      background={<ScrollableBackground />}
-      className={`flex flex-col text-center md:flex-row ${className}`}
-      ref={ref}
-      {...props}
-    >
-      <div className="w-full md:w-1/3">
-        <Heart className="mx-auto" />
-        <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
-          +<Counter count={99} duration={5000} isVisible={isVisible} />
-        </h4>
-        <p className="mt-7 text-sm font-normal leading-5 text-grey">
-          Happy Clients
-        </p>
-      </div>
-      <div className="mt-16 w-full md:mt-0 md:w-1/3">
-        <Computer className="mx-auto" />
-        <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
-          +<Counter count={999} duration={5000} isVisible={isVisible} />
-        </h4>
-        <p className="mt-7 text-sm font-normal leading-5 text-grey">
-          Working Hours
-        </p>
-      </div>
-      <div className="mt-16 w-full md:mt-0 md:w-1/3">
-        <Suitcase className="mx-auto" />
-        <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
-          +<Counter count={20} duration={5000} isVisible={isVisible} />
-        </h4>
-        <p className="mt-7 text-sm font-normal leading-5 text-grey">
-          Finished Projects
-        </p>
+    <Container background={<ScrollableBackground />} {...props}>
+      <div
+        ref={ref}
+        className={`flex flex-col text-center md:flex-row ${className}`}
+      >
+        <div className="w-full md:w-1/3">
+          <Heart className="mx-auto" />
+          <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
+            +<Counter count={99} duration={5000} isVisible={isVisible} />
+          </h4>
+          <p className="mt-7 text-sm font-normal leading-5 text-grey">
+            Happy Clients
+          </p>
+        </div>
+        <div className="mt-16 w-full md:mt-0 md:w-1/3">
+          <Computer className="mx-auto" />
+          <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
+            +<Counter count={999} duration={5000} isVisible={isVisible} />
+          </h4>
+          <p className="mt-7 text-sm font-normal leading-5 text-grey">
+            Working Hours
+          </p>
+        </div>
+        <div className="mt-16 w-full md:mt-0 md:w-1/3">
+          <Suitcase className="mx-auto" />
+          <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
+            +<Counter count={20} duration={5000} isVisible={isVisible} />
+          </h4>
+          <p className="mt-7 text-sm font-normal leading-5 text-grey">
+            Finished Projects
+          </p>
+        </div>
       </div>
     </Container>
   )
