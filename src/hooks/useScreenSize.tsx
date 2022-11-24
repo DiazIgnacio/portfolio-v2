@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 
-type ScreenSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-
 const useScreenSize = () => {
-  const screenSizes = {
+  const screenSizes: Record<string, number> = {
     xs: 0,
     sm: 640,
     md: 768,
@@ -12,7 +10,7 @@ const useScreenSize = () => {
     '2xl': 1536
   }
 
-  const [screenSize, setScreenSize] = useState<ScreenSizes>('xs')
+  const [screenSize, setScreenSize] = useState<string>('xs')
   const isMobile = screenSize === 'xs' || screenSize === 'sm'
   const isTablet = screenSize === 'md'
   const isDesktop =
@@ -21,8 +19,7 @@ const useScreenSize = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth
-      // get the closest screen size that's smaller than the current width
-      const size = Object.keys(screenSizes).reduce((prev, curr) => {
+      const size: string = Object.keys(screenSizes).reduce((prev, curr) => {
         return screenSizes[curr] < width ? curr : prev
       }, 'xs')
       size !== screenSize && setScreenSize(size)
