@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 600)
 
     return () => clearTimeout(timer)
   }, [])
@@ -18,7 +18,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <div
         className={`
        transition-opacity duration-700
-        ${loading ? 'opacity-0' : 'opacity-100'}
+        ${loading ? 'invisible opacity-0' : 'visible opacity-100'}
       `}
       >
         {children}
