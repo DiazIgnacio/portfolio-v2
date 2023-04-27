@@ -40,8 +40,8 @@ const Navbar = () => {
       <section className="flex md:hidden">
         <HamburguerIcon onClick={openMenu} />
         <div
-          className={`transition-all ${
-            isOpen ? styles.showMenuNav : styles.hideMenuNav
+          className={`absolute inset-0 z-50 flex h-screen w-full flex-col items-center justify-evenly bg-white transition-all duration-300 ${
+            isOpen ? 'visible opacity-100' : 'invisible opacity-0'
           }`}
         >
           <CrossIcon onClick={closeMenu} />

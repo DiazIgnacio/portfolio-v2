@@ -1,3 +1,4 @@
+import services from 'src/constants/services'
 import Container from '../Container'
 
 import Service from './Service'
@@ -5,8 +6,8 @@ import Skill from './Skill'
 
 const Skills = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <Container className={`flex flex-col lg:flex-row ${className}`} {...props}>
-      <div className="mr-16 w-full lg:w-1/2">
+    <Container className={`${className}`} {...props}>
+      <div className="mr-16 w-full">
         <h1 className="text-3xl font-bold text-primary">My Skills</h1>
         <div className="mt-12 grid grid-cols-1 grid-rows-2 gap-12 md:grid-cols-2">
           <Skill name="HTML" percentage={90} />
@@ -15,25 +16,17 @@ const Skills = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
           <Skill name="React" percentage={60} />
         </div>
       </div>
-      <div className="mt-16 w-full lg:mt-0 lg:w-1/2">
+      <div className="mt-16 w-full">
         <h1 className="text-3xl font-bold text-primary">Services</h1>
         <div className="mt-12 grid grid-cols-1 grid-rows-2 gap-12 md:grid-cols-2">
-          <Service
-            name="Web Development"
-            description="Responsive web design and development"
-          />
-          <Service
-            name="Web Development"
-            description="Responsive web design and development"
-          />
-          <Service
-            name="Web Development"
-            description="Responsive web design and development"
-          />
-          <Service
-            name="Web Development"
-            description="Responsive web design and development"
-          />
+          {services.map(service => (
+            <Service
+              key={service.name}
+              name={service.name}
+              description={service.description}
+              Icon={service.Icon}
+            />
+          ))}
         </div>
       </div>
     </Container>

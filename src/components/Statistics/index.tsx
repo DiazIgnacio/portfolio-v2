@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useIsElementVisible } from 'src/hooks/useIsVisible'
 
 import Container from '../Container'
-import Computer from '../Logos/Computer'
-import Heart from '../Logos/Heart'
-import Suitcase from '../Logos/Suitcase'
+import { Computer, Heart, Suitcase } from '../Logos'
 import ScrollableBackground from '../ScrollableBackground'
+import StatItem from './StatItem'
 
 const Statistics = ({
   className,
@@ -18,61 +17,29 @@ const Statistics = ({
     <Container background={<ScrollableBackground />} {...props}>
       <div
         ref={ref}
-        className={`flex flex-col text-center md:flex-row ${className}`}
+        className={`flex flex-col space-y-16 text-center md:flex-row md:space-y-0 ${className}`}
       >
-        <div className="w-full md:w-1/3">
-          <Heart className="mx-auto" />
-          <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
-            +<Counter count={99} duration={5000} isVisible={isVisible} />
-          </h4>
-          <p className="mt-7 text-sm font-normal leading-5 text-grey">
-            Happy Clients
-          </p>
-        </div>
-        <div className="mt-16 w-full md:mt-0 md:w-1/3">
-          <Computer className="mx-auto" />
-          <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
-            +<Counter count={999} duration={5000} isVisible={isVisible} />
-          </h4>
-          <p className="mt-7 text-sm font-normal leading-5 text-grey">
-            Working Hours
-          </p>
-        </div>
-        <div className="mt-16 w-full md:mt-0 md:w-1/3">
-          <Suitcase className="mx-auto" />
-          <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
-            +<Counter count={20} duration={5000} isVisible={isVisible} />
-          </h4>
-          <p className="mt-7 text-sm font-normal leading-5 text-grey">
-            Finished Projects
-          </p>
-        </div>
+        <StatItem
+          count={99}
+          isVisible={isVisible}
+          text="Happy Clients"
+          icon={<Heart className="mx-auto" />}
+        />
+        <StatItem
+          count={999}
+          isVisible={isVisible}
+          text="Working Hours"
+          icon={<Computer className="mx-auto" />}
+        />
+        <StatItem
+          count={25}
+          isVisible={isVisible}
+          text="Finished Projects"
+          icon={<Suitcase className="mx-auto" />}
+        />
       </div>
     </Container>
   )
-}
-
-type CounterProps = {
-  className?: string
-  count: number
-  duration: number
-  isVisible: boolean
-}
-
-const Counter = ({ count, duration, isVisible }: CounterProps) => {
-  const [currentCount, setCurrentCount] = useState(0)
-
-  const step = duration / count
-
-  useEffect(() => {
-    if (currentCount < count && isVisible) {
-      setTimeout(() => {
-        setCurrentCount(currentCount + 1)
-      }, step)
-    }
-  }, [currentCount, isVisible])
-
-  return <span>{currentCount}</span>
 }
 
 export default Statistics

@@ -1,8 +1,8 @@
-import Email from './Email'
-import Github from './Github'
-import Linkedin from './Linkedin'
-import Phone from './Phone'
-import Heart from './Heart'
-import WebDevelopment from './WebDevelopment'
-
-export { Email, Github, Linkedin, Phone, Heart, WebDevelopment }
+export { default as Email } from './Email'
+export { default as Github } from './Github'
+export { default as Linkedin } from './Linkedin'
+export { default as Phone } from './Phone'
+export { default as Heart } from './Heart'
+export { default as WebDevelopment } from './WebDevelopment'
+export { default as Computer } from './Computer'
+export { default as Suitcase } from './Suitcase'

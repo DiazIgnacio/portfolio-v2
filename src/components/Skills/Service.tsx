@@ -1,15 +1,14 @@
-import WebDevelopment from '../Logos/WebDevelopment'
+import { ReactNode } from 'react'
 
 export type ServiceProps = React.HTMLAttributes<HTMLDivElement> & {
   name: string
   description: string
+  Icon: ReactNode
 }
 
-const Service = ({ name, description }: ServiceProps) => (
+const Service = ({ name, description, Icon }: ServiceProps) => (
   <div className="flex items-center">
-    <div>
-      <WebDevelopment filled />
-    </div>
+    <div>{Icon}</div>
     <div className="ml-4">
       <h2 className="text-base font-bold leading-6 text-black lg:text-xl">
         {name}

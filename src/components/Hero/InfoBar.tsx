@@ -1,18 +1,15 @@
-import Email from '../Logos/Email'
-import Github from '../Logos/Github'
-import Linkedin from '../Logos/Linkedin'
-import Phone from '../Logos/Phone'
+import { Email, Github, Linkedin, Phone } from '../Logos'
 
 const Infobar = () => (
   <div className="hidden h-10 w-screen items-center justify-around bg-primary md:flex">
     <div className="flex">
       <span className="mr-7 flex items-center text-sm font-normal leading-10">
         <Email className="mr-4" />
-        diaz.ignacio023@gmail.com
+        <a href="mailto:diaz.ignacio023@gmail.com">Email Me!</a>
       </span>
       <span className="flex items-center text-sm font-normal leading-10">
         <Phone className="mr-4" />
-        +54 9 341 696 2877
+        <a href="tel:+5493416962877">Call Me!</a>
       </span>
     </div>
     <div className="flex items-center">
