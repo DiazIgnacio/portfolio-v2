@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           responsive websites. In my free time, I like to read and spend time
           with my family and friends."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo-no-background.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

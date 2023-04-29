@@ -6,8 +6,8 @@ export type ServiceProps = React.HTMLAttributes<HTMLDivElement> & {
   Icon: ReactNode
 }
 
-const Service = ({ name, description, Icon }: ServiceProps) => (
-  <div className="flex items-center">
+const Service = ({ name, description, Icon, ...props }: ServiceProps) => (
+  <div className="flex items-center" {...props}>
     <div>{Icon}</div>
     <div className="ml-4">
       <h2 className="text-base font-bold leading-6 text-black lg:text-xl">

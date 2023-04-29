@@ -45,6 +45,7 @@ const Projects = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
             } ${row === 1 ? '' : 'md:row-span-2'} relative overflow-hidden ${
               styles.project
             }`}
+            key={title}
             style={
               !isMobile ? { height: colWidth * row + GAP * (row - 1) } : {}
             }

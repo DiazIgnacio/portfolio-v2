@@ -33,7 +33,7 @@ const Navbar = () => {
       }`}
     >
       <Link href="/">
-        <Logo />
+        <Logo data-aos="fade-right" data-aos-delay="800" />
       </Link>
 
       {/* Mobile Menu */}
@@ -67,7 +67,11 @@ const Navbar = () => {
       </section>
 
       {/* Desktop Menu */}
-      <ul className="hidden items-center justify-end space-x-10 text-2xl font-normal leading-8 md:flex">
+      <ul
+        className="hidden items-center justify-end space-x-10 text-2xl font-normal leading-8 md:flex"
+        data-aos="fade-left"
+        data-aos-delay="800"
+      >
         <Link href="#about">
           <li className="cursor-pointer">About</li>
         </Link>

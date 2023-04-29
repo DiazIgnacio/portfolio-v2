@@ -8,18 +8,35 @@ const About = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
     <Container {...props}>
       <div className="text-center">
-        <h2 className="text-5xl font-bold leading-10 text-primary">About Me</h2>
-        <p className="mx-auto mt-5 max-w-[400px] text-lg leading-5 text-grey">
+        <h2
+          className="text-5xl font-bold leading-10 text-primary"
+          data-aos="zoom-in-up"
+        >
+          About Me
+        </h2>
+        <p
+          className="mx-auto mt-5 max-w-[400px] text-lg leading-5 text-grey"
+          data-aos="zoom-in-up"
+          data-aos-delay="300"
+        >
           Here I show some of my main skills among a little of personal data
           about myself
         </p>
       </div>
 
       <div className="mt-20 flex flex-col items-center lg:flex-row lg:items-start lg:justify-between">
-        <div className="relative w-3/4 text-center lg:w-1/3">
+        <div
+          className="relative w-3/4 text-center lg:w-1/3"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
           <Circles />
         </div>
-        <div className="mx-auto mt-12 w-11/12 text-base font-normal leading-8 text-black lg:mt-0 lg:w-3/5 lg:text-lg xl:text-xl">
+        <div
+          className="mx-auto mt-12 w-11/12 text-base font-normal leading-8 text-black lg:mt-0 lg:w-3/5 lg:text-lg xl:text-xl"
+          data-aos="fade-left"
+          data-aos-delay="400"
+        >
           <p>
             Hi! I'm Ignacio Diaz, a Frontend Web Developer based in Argentina. I
             have a passion for all things web, and love working on interactive
