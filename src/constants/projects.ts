@@ -20,7 +20,7 @@ const projects: Array<Project> = [
     title: 'Calendar App',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     image: 'images/projects/ignacio-diaz-calendar-app.jpeg',
-    link: 'https://calendar-app-tau.vercel.app/',
+    link: 'https://calendar-app-diazignacio.vercel.app',
     col: 1,
     row: 1
   },
