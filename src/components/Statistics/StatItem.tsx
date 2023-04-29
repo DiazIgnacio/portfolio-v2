@@ -21,7 +21,7 @@ const StatItem = ({
       <h4 className="mt-7 text-6xl font-bold leading-10 text-white">
         +<Counter count={count} duration={duration} isVisible={isVisible} />
       </h4>
-      <p className="mt-7 text-sm font-normal leading-5 text-grey">{text}</p>
+      <p className="mt-7 text-sm font-normal leading-5 text-white">{text}</p>
     </div>
   )
 }

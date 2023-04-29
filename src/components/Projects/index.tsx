@@ -31,14 +31,23 @@ const Projects = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
 
   return (
     <Container className={`w-9/12 ${className}`} {...props}>
-      <div className="text-center">
+      <div
+        className="text-center"
+        data-aos="zoom-in-down"
+        data-aos-duration="1000"
+      >
         <h2 className="text-5xl font-bold leading-10 text-primary">Projects</h2>
         <p className="mx-auto mt-5 max-w-[400px] text-lg leading-5 text-grey">
           Some of my latest Work
         </p>
       </div>
-      <div className="mt-9 grid grid-cols-3 grid-rows-3 gap-6" ref={gridRef}>
-        {projects.map(({ image, col, row, link, title }) => (
+      <div
+        className="mt-9 grid grid-cols-3 grid-rows-3 gap-6"
+        ref={gridRef}
+        data-aos="fade-in"
+        data-aos-duration="1000"
+      >
+        {projects.map(({ image, col, row, link, title }, index) => (
           <div
             className={`col-span-3 row-span-1 ${
               col === 1 ? 'md:col-span-1' : 'md:col-span-2'

@@ -18,7 +18,9 @@ module.exports = {
         primary: withOpacity('--color-primary'),
         'primary-dark': withOpacity('--color-primaryDark'),
         gradientTo: withOpacity('--color-gradientTo'),
-        grey: '#989898'
+        grey: '#435670'
+
+        // grey: 'gray'
       },
       fontSize: {
         '2xs': '.625rem', // 10px

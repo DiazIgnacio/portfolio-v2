@@ -1,14 +1,15 @@
-type Circles = {
+type Circles = HTMLDivElement & {
   rotate?: boolean
 }
 
-const Circles = ({ rotate = false }) => (
+const Circles = ({ rotate = false, ...props }) => (
   <div
     className={`absolute mx-auto aspect-square w-1/3 md:h-1/3 md:w-auto lg:mx-0 ${
       rotate
         ? '-right-[8.33%] bottom-16 translate-x-1/2 rotate-180'
         : '-left-[8.33%] top-16 -translate-x-1/2'
     }`}
+    {...props}
   >
     {/* Outer Circle */}
     <div className="bg-gradient-to-t-primary absolute top-0 left-0 aspect-square w-full rounded-full">
