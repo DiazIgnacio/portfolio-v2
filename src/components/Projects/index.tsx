@@ -49,7 +49,7 @@ const Projects = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
       >
         {projects.map(({ image, col, row, link, title }, index) => (
           <div
-            className={`col-span-3 row-span-1 ${
+            className={`col-span-3 row-span-1 aspect-video md:aspect-auto ${
               col === 1 ? 'md:col-span-1' : 'md:col-span-2'
             } ${row === 1 ? '' : 'md:row-span-2'} relative overflow-hidden ${
               styles.project
