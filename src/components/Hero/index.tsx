@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router'
 import Infobar from './InfoBar'
 import Navbar from './Navbar'
 import Waves from './Waves'
 
 const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
+  const router = useRouter()
   return (
     <section
       className={`relative flex h-screen flex-col bg-black text-white ${className}`}
@@ -36,9 +38,12 @@ const Hero = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => {
           with my family and friends.
         </p>
         <button
-          className="bg-gradient-to-t-primary relative z-20 mt-6 cursor-pointer rounded-2xl px-8 py-4 text-lg font-medium leading-6 md:mt-8 md:py-5 md:px-10 md:text-xl lg:mt-10 lg:py-6 lg:px-12 lg:text-2xl"
+          className="bg-gradient-to-t-primary relative z-20 mt-6 cursor-pointer
+           rounded-2xl px-8 py-4 text-lg font-medium leading-6 md:mt-8 md:py-5
+            md:px-10 md:text-xl lg:mt-10 lg:py-6 lg:px-12 lg:text-2xl"
           data-aos="fade-up"
           data-aos-delay="1250"
+          onClick={() => router.push('#projects')}
         >
           Portfolio
         </button>
