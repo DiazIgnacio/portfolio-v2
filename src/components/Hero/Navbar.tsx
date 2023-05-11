@@ -33,7 +33,11 @@ const Navbar = () => {
       }`}
     >
       <Link href="/">
-        <Logo data-aos="fade-right" data-aos-delay="800" />
+        <Logo
+          data-aos="fade-right"
+          data-aos-delay="800"
+          className="cursor-default"
+        />
       </Link>
 
       {/* Mobile Menu */}

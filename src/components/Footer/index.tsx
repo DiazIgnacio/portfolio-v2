@@ -12,7 +12,7 @@ const Footer = (props: React.HTMLProps<HTMLDivElement>) => {
       black
     >
       <div className="text-center md:w-1/6">
-        <Logo onClick={goToTop} />
+        <Logo onClick={goToTop} className="cursor-pointer" />
       </div>
       <div className="md:w-2/6">
         <p className="text-center text-white md:text-left">

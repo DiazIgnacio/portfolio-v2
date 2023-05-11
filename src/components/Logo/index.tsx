@@ -1,10 +1,12 @@
 import { HTMLAttributes, forwardRef } from 'react'
 
 const Logo = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
-  (props, ref) => {
+  ({ className, ...props }, ref) => {
     return (
       <div
-        className="cursor-pointer text-4xl uppercase leading-10 md:text-5xl"
+        className={`text-4xl uppercase leading-10 md:text-5xl ${
+          className ?? ''
+        }`}
         ref={ref}
         {...props}
       >
