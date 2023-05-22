@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react'
 import { useTheme } from 'src/contexts/ThemeContext'
 import Logo from '../Logo'
 
-import styles from './Navbar.module.css'
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
